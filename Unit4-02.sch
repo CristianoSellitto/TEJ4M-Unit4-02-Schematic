@@ -1,0 +1,95 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Battery 5V
+U 1 1 650882EA
+P 3050 3150
+F 0 "5V" H 3158 3196 50  0000 L CNN
+F 1 "Battery" H 3158 3105 50  0000 L CNN
+F 2 "" V 3050 3210 50  0001 C CNN
+F 3 "~" V 3050 3210 50  0001 C CNN
+	1    3050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L 10H
+U 1 1 6508B7C6
+P 3650 2800
+F 0 "10H" V 3840 2800 50  0000 C CNN
+F 1 "L" V 3749 2800 50  0000 C CNN
+F 2 "" H 3650 2800 50  0001 C CNN
+F 3 "~" H 3650 2800 50  0001 C CNN
+	1    3650 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED RED
+U 1 1 6508EF21
+P 3650 3150
+F 0 "RED" H 3643 2895 50  0000 C CNN
+F 1 "LED" H 3643 2986 50  0000 C CNN
+F 2 "" H 3650 3150 50  0001 C CNN
+F 3 "~" H 3650 3150 50  0001 C CNN
+	1    3650 3150
+	1    0    0    1   
+$EndComp
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 65090D76
+P 3400 3450
+F 0 "SW?" H 3400 3225 50  0000 C CNN
+F 1 "SW_SPST" H 3400 3316 50  0000 C CNN
+F 2 "" H 3400 3450 50  0001 C CNN
+F 3 "~" H 3400 3450 50  0001 C CNN
+	1    3400 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2800 3500 2800
+Wire Wire Line
+	3400 2950 3400 3150
+Wire Wire Line
+	3400 3150 3500 3150
+Wire Wire Line
+	3050 2950 3400 2950
+Wire Wire Line
+	3050 3450 3200 3450
+Wire Wire Line
+	3050 2950 3050 2800
+Wire Wire Line
+	3600 3450 3800 3450
+Connection ~ 3050 2950
+$Comp
+L Device:R 220Ω
+U 1 1 650AA3DA
+P 3800 3300
+F 0 "220Ω" H 3870 3346 50  0000 L CNN
+F 1 "R" H 3870 3255 50  0000 L CNN
+F 2 "" V 3730 3300 50  0001 C CNN
+F 3 "~" H 3800 3300 50  0001 C CNN
+	1    3800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3350 3050 3450
+Wire Wire Line
+	4100 2800 4100 3450
+Connection ~ 3800 3450
+Wire Wire Line
+	3800 2800 4100 2800
+Wire Wire Line
+	3800 3450 4100 3450
+$EndSCHEMATC
