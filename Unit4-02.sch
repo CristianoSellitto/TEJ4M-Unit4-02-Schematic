@@ -46,17 +46,6 @@ F 3 "~" H 3650 3150 50  0001 C CNN
 	1    3650 3150
 	1    0    0    1   
 $EndComp
-$Comp
-L Switch:SW_SPST SW?
-U 1 1 65090D76
-P 3400 3450
-F 0 "SW?" H 3400 3225 50  0000 C CNN
-F 1 "SW_SPST" H 3400 3316 50  0000 C CNN
-F 2 "" H 3400 3450 50  0001 C CNN
-F 3 "~" H 3400 3450 50  0001 C CNN
-	1    3400 3450
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3050 2800 3500 2800
 Wire Wire Line
@@ -69,8 +58,6 @@ Wire Wire Line
 	3050 3450 3200 3450
 Wire Wire Line
 	3050 2950 3050 2800
-Wire Wire Line
-	3600 3450 3800 3450
 Connection ~ 3050 2950
 $Comp
 L Device:R 220Ω
@@ -87,9 +74,32 @@ Wire Wire Line
 	3050 3350 3050 3450
 Wire Wire Line
 	4100 2800 4100 3450
-Connection ~ 3800 3450
 Wire Wire Line
 	3800 2800 4100 2800
 Wire Wire Line
 	3800 3450 4100 3450
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 6509EB2B
+P 3400 3550
+F 0 "SW?" H 3400 3835 50  0000 C CNN
+F 1 "SW_SPDT" H 3400 3744 50  0000 C CNN
+F 2 "" H 3400 3550 50  0001 C CNN
+F 3 "~" H 3400 3550 50  0001 C CNN
+	1    3400 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3800 3450 3700 3450
+Wire Wire Line
+	3700 3550 3700 3450
+Wire Wire Line
+	3700 3550 3600 3550
+Connection ~ 3800 3450
+Wire Wire Line
+	3200 3650 2950 3650
+Wire Wire Line
+	2950 3650 2950 2950
+Wire Wire Line
+	2950 2950 3050 2950
 $EndSCHEMATC
